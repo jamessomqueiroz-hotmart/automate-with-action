@@ -1,8 +1,5 @@
 name: Automate PR with GH Action
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
   automated-pr:
@@ -48,7 +45,7 @@ jobs:
           committer: ${{ github.event.head_commit.author.name }} <${{ github.event.head_commit.author.email }}>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
-          branch: "feat/automation/${CI_COMMIT_REVISION::7}"
+          branch: "feat/automation"
           delete-branch: true
           title: "ci: pr automation"
           body: |
