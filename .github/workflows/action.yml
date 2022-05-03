@@ -81,4 +81,4 @@ jobs:
           # Stage the file, commit and push
           git add src/time.txt
           git commit -m "new date commit [skip ci]"
-          git push origin main
+          git push origin ${{ github.head_ref }}
