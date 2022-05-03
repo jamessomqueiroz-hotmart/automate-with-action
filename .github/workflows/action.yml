@@ -60,6 +60,9 @@ jobs:
 
   date:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
     steps:
       # Checkout the branch
       - name: checkout
